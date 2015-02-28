@@ -1,4 +1,6 @@
 # -*- coding:utf-8 -*-
 .PHONY: deploy
 deploy:
-	goapp --email=hack1989huang@gmail.com deploy 
+# goapp deploy
+# or
+	appcfg.py --email=hack1989huang@gmail.com update .
