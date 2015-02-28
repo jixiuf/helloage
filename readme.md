@@ -1,13 +1,13 @@
 # My Info 
-my mail hack1989huang # gmail.com
-password 跟邮箱password 一样
+ my mail hack1989huang # gmail.com
+ password 跟邮箱password 一样
+
 http://jixiufcow1.appspot.com/index
 
 #  上传gae app失败的解决办法
  如 果你在国内的网络环境下，部署/上传gae程序时，遇到了上传失败的问题，那么你可以试试为 appcfg.py 套上一层 SOCKS 代理。具体做法如下（以 Mac OS X 上的 Google App Engine Launcher 的安装位置为例）：
-
-     下载 SocksiPy，提取出其中的 socks.py，放入 /usr/local/google_appengine。
-     在 appcfg.py 的 import sys 一行的下面加上这 4 行：
+ 下载 SocksiPy，提取出其中的 socks.py，放入 /usr/local/google_appengine。
+ 在 appcfg.py 的 import sys 一行的下面加上这 4 行：
 
      import socks
      import socket
@@ -23,3 +23,10 @@ http://jixiufcow1.appspot.com/index
  ------------------------------------------------------------------------------------------
 
 
+# go app engine emacs 配置 godef
+
+http://stackoverflow.com/questions/11286534/test-cases-for-go-and-appengine
+
+    ln -s -f /Users/jixiuf/go_appengine/goroot/src/appengine $GOPATH/src
+    ln -s /Users/jixiuf/go_appengine/goroot/pkg/darwin_amd64_appengine/appengine.a /Users/jixiuf/repos/proj_golang/pkg/darwin_amd64/
+    ln -s /Users/jixiuf/go_appengine/goroot/pkg/darwin_amd64_appengine/appengine /Users/jixiuf/repos/proj_golang/pkg/darwin_amd64/
