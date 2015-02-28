@@ -3,4 +3,4 @@
 deploy:
 # goapp deploy
 # or
-	appcfg.py --email=hack1989huang@gmail.com update .
+	appcfg.py -v --email=hack1989huang@gmail.com update .
