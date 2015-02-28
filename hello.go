@@ -26,23 +26,24 @@ func handlerHelloWorld(w http.ResponseWriter, r *http.Request) {
 }
 
 func handlerUser(w http.ResponseWriter, r *http.Request) {
+
 	c := appengine.NewContext(r)
 	u := user.Current(c)
 	if u == nil {
-		fmt.Fprint(w, "user not login,try login... ")
+		// fmt.Fprint(w, "user not login,try login... <br/>")
 		url, err := user.LoginURL(c, r.URL.String())
 		if err != nil {
-			fmt.Fprint(w, "user not login,try login error ")
+			// fmt.Fprint(w, "user not login,try login error<br/> ")
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		fmt.Fprint(w, "user not login,not found ")
+		// fmt.Fprintf(w, "user not login,need login at %v", url)
 		w.Header().Set("Location", url)
-		w.WriteHeader(http.StatusNotFound)
+		w.WriteHeader(http.StatusFound)
 		return
 	}
 
-	fmt.Fprint(w, "Hello, User:%v!", u)
+	fmt.Fprintf(w, "Hello, User:%v!", u)
 }
 
 func handlerFetchUrl(w http.ResponseWriter, r *http.Request) {
