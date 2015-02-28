@@ -1,7 +1,7 @@
 # My Info 
 my mail hack1989huang # gmail.com
 password 跟邮箱password 一样
-http://jixiufcow1.appspot.com/
+http://jixiufcow1.appspot.com/index
 
 #  上传gae app失败的解决办法
  如 果你在国内的网络环境下，部署/上传gae程序时，遇到了上传失败的问题，那么你可以试试为 appcfg.py 套上一层 SOCKS 代理。具体做法如下（以 Mac OS X 上的 Google App Engine Launcher 的安装位置为例）：
